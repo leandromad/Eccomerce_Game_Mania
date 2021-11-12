@@ -11,16 +11,21 @@
   rel="stylesheet"
   href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
   />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script src="js/jquery-3.6.0.js"></script>
 </head>
-<body onload="renderizaProdutos()">
+<body>
 
   <header>
-    <div class="container-grid posicionamento-header header-1">
+    <div class="container-grid posicionamento-header1 header-1">
 
       <nav class="info">
-        <a href="#">(01) 2345-6789</a>
-        <a href="#">(01) 23456-7890</a>
+        <div class="phone">
+          <a href="#">(01) 2345-6789</a>
+        </div>
+        <div class="cel">
+          <a href="#">(01) 23456-7890</a>
+        </div>
       </nav>
         
       <nav class="client">
@@ -34,105 +39,138 @@
 
     <div class="divider-1"></div>
 
-    <div class="container-grid posicionamento-header header-2">
-      <a class=" logo" href="#"><h1>GAME MANIA</h1></a>
-      
-      
+    <div id="header2" class="posicionamento-header2 header-2 container-grid ">
+      <a class=" logo" href="#">
+        <h1>GAME MANIA</h1>
+      </a>
       <nav class="menu">
-        <a href="#">Lançamentos</a>
-        <a href="#">Smartphone</a>
-        <a href="#">Computador</a>
-        <a href="#">Xbox</a>
-        <a href="#">Playstation</a>
-        <a href="#">Nintendo</a>
-        <a href="#">Ofertas</a>
-        <div class="search">
-          <input class="search-txt" type="text" name="" placeholder="O que você procura?">
-          <a href="#" class="search-btn">
-            <img src="assets/loupe.png" alt="" width="20" height="20">
-          </a>
+        <div class="itens-menu">
+          <div id="category" class="category">
+            <a href="index.html">Inicio</a>
+            <a href="#">Lançamentos</a>
+            <a href="#">Destaques</a>
+            <a href="#">Categorias</a>
+            <a href="#">Ofertas</a>
+            <div><img class="close toggle" src="assets/times-solid.svg" alt=""></div>
+          </div>
+          <form action="">
+            <input id="campo-email" type="submit email" name="" placeholder="Buscar...">
+          </form>
         </div>
       </nav>
-
+      <a href="#"><img class="barras toggle" src="assets/bars-solid.svg" alt="Menu de barras"></a>
     </div>
 
     <div class="divider-1"></div>
   </header>
 
-  <div class="promocoes swiper">
-    <div class="swiper-wrapper">
-      <p class="promo swiper-slide"><strong>Formas de pagamento </strong> em até 12x  sem juros. <a href="#">Veja detalhes</a></p>
-      <p class="promo swiper-slide"><strong>Ofertas </strong> que preparamos especialmente para você. <a href="#">Veja detalhes</a></p>
-      <p class="promo swiper-slide"><strong>Frete grátis</strong> para todo o Brasil. <a href="#">Saiba mais</a></p>
+  <section class="promocoes container-fluid">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner container-fluid">
+        <div class="carousel-item active ">
+          <p class="promo d-block w-100 "><strong>Formas de pagamento </strong> em até 12x  sem juros. <a href="#">Veja detalhes</a></p>
+        </div>
+        <div class="carousel-item">
+          <p class="promo d-block w-100"><strong>Ofertas </strong> que preparamos especialmente para você. <a href="#">Veja detalhes</a></p>
+        </div>
+        <div class="carousel-item">
+          <p class="promo d-block w-100"><strong>Frete grátis</strong> para todo o Brasil. <a href="#">Saiba mais</a></p>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    
-  </div>
+  </section>
+  
+
 
   <div class="divider-1"></div>
 
   <section id="banner">
     <a href="#">
-      <div class="banner"></div>
+      <div class="banner">
+        <div class="container-grid itens-banner">
+          <div class="texto-banner">
+            <h2>FIFA 22</h2>
+            <div class="buttons container">
+              <button href="#" type="button" class="btn btn-dark">Compre Já</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </a>
   </section>
   
   <section class="secao container-grid ">
-    <h1>VIDEO GAME PLAYSTATION 5 PS5</h1>
+    <h2>VIDEO GAME PLAYSTATION 5 PS5</h2>
     <p>Um  sistema poderoso e capacidade para rodar os melhores e exclusivos jogos!</p>
     <div class="buttons container">
-      <button href="#" type="button" class="btn btn-dark">Saiba mais</button>
-      <button href="#" type="button" class="btn btn-dark">Ver consoles</button>
-      <button href="#" type="button" class="btn btn-dark">Ver vídeo</button>
+      <button href="#" type="button" class="btn btn-dark">Ver +</button>
+      <button href="#" type="button" class="btn btn-dark">Consoles</button>
+      <button href="#" type="button" class="btn btn-dark">Vídeo</button>
     </div>
   </section>
 
   <div class="divider-1"></div>
   
   <section id="espacoProdutos" class="products container-grid">
+    <h2>PRINCIPAIS PRODUTOS</h2>
 
-    
-    <div class="product">
-      <a href="#">
-        <img src="assets/image 1.jpg" alt="">
-        <h5>Fifa 2022</h5>
-        <p>Playstation</p>
-      </a>
-      <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
-      <a href="#">
-        <p class="marca">Ea Sport</p>
-        <h4>R$ 200,00</h4>
-      </a>
-    </div>
-      
-   
-    <div class="product">
-      <a href="#">
-        <img src="assets/image 3.png" alt="">
-        <h5>Iphone apple 13</h5>
-        <p>SmartPhone Apple</p>
-      </a>
-      <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
-      <a href="#">
-        <p class="marca">Apple</p>
-        <h4>R$ 8600,00</h4>
-      </a>
-    </div>
-    <div class="product">
-      <a href="#">
-        <img src="assets/image 4.png" alt="">
-        <h5>Console xbox series x</h5>
-        <p>Xbos Series X</p>
-      </a>
-      <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
-      <a href="#">
-        <p class="marca">Sony</p>
-        <h4>R$ 7000,00</h4>
-      </a>
+    <div class="alinhamento">
+      <div class="cards">
+        <div class="product">
+          <a href="#">
+            <img src="assets/image 1.jpg" alt="">
+            <h5>Fifa 2022</h5>
+            <p>Playstation</p>
+          </a>
+          <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
+          <a href="#">
+            <p class="marca">Ea Sport</p>
+            <h4>R$ 200,00</h4>
+          </a>
+        </div>
+          
+       
+        <div class="product">
+          <a href="#">
+            <img src="assets/image 3.png" alt="">
+            <h5>Iphone apple 13</h5>
+            <p>SmartPhone Apple</p>
+          </a>
+          <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
+          <a href="#">
+            <p class="marca">Apple</p>
+            <h4>R$ 8600,00</h4>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <img src="assets/image 4.png" alt="">
+            <h5>Console xbox series x</h5>
+            <p>Xbos Series X</p>
+          </a>
+          <span class="rate"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
+          <a href="#">
+            <p class="marca">Sony</p>
+            <h4>R$ 7000,00</h4>
+          </a>
+        </div>
+      </div>
     </div>
 
   </section>
+
 
   <div class="divider-1"></div>
 
@@ -220,9 +258,8 @@
     </div>
   </footer>
 
-  
-  <script src="jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/script.js" crossorigin="anonymous"></script>
 </body>
