@@ -1,18 +1,25 @@
-
 /* IMPORT */
 @import url(
     'https://fonts.googleapis.com/css2?family=Roboto&display=swap'
     );
+@import url(
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Sahitya&display=swap'
+    );
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+/* 
+================================================================================================================
+HEADER
+================================================================================================================
+*/
 .info {
 
-    width: 385px;
+    width: 24.18478%;
     display: flex;
     justify-content: space-between;
 
@@ -37,10 +44,8 @@
 
 .client {
 
-    width: 848px;
+    width: 49.45652174%;
     display: flex;
-    height: 24px;
-    margin-right: 134px;
     justify-content: space-between;
 
 }
@@ -70,14 +75,13 @@ header {
 
 .header-1 {
 
-    height: 48px;
+    height: 50px;
 
 }
 
 .header-2 {
 
-    height: 98px;
-    width: 1000px;
+    height: 100px;
 
 }
 
@@ -87,38 +91,35 @@ header {
 
 .container-grid {
 
-    margin: 0 auto;;
-    width: 1840px;
+    margin: 0 auto;
+    width: 95.8333333%;
   
 }
 
-.posicionamento-header {
+.posicionamento-header1,
+.posicionamento-header2 {
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+}
+
+.logo {
+    width: 18.47826%;
 }
 
 .logo h1 {
     color: #FF0FCA;
     text-decoration: none;
     margin: 0;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Poppins', sans-serif;
+    font-weight: 800;
 }
 
-
-
-
 .menu {
-
-    width: 1393px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
+    width: 74.72826087%;
 }
 
 .menu a {
@@ -128,8 +129,8 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 22px;
-    
-
+    transition: color 0.2s;
+    position: relative;
 }
 
 
@@ -139,52 +140,64 @@ header {
 
 }
 
-.search {
-    background: white;
-    border: 1px solid #8f8f8f;
-    height: 40px;
-    padding: 10px;
-    border-radius: 40px;
+.menu a::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: #FF0FCA;
+    position: absolute;
+    left: 0;
+    bottom: -2.4rem;
+    transition: width 0.2s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.itens-menu {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.search-txt {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    color: black;
-    font-size: 16px;
-    line-height: 40px;
-    width: 0;
-    transition: width 0.4s ease-in-out;
-}
-
-::-webkit-input-placeholder {
-    color: black;
-
-
-}
-
-.search-btn {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.search:hover > .search-txt {
-    width: 240px;
-    padding: 0 6px;
-
+.category {
+    width:66.18181818%;
+    justify-content: space-between;
+    display: flex;
 }
 
-/* Border */
+.menu form {
+    
+    text-align: center;
+    width: 15.2%;
+}
+
+.menu input {
+
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.barras {
+    width: 30px;
+    display: none;
+}
+
+.close {
+    display: none;
+    width: 20px;
+}
+ 
+
+
+/*
+===================================================================================================
+Border
+===================================================================================================
+*/
 .divider-1 {
 
     height: 2px;
@@ -192,28 +205,34 @@ header {
 
 }
 
+/*
+=====================================================================================================
+Promocoes
+=====================================================================================================
+*/
+
 .promocoes {
 
   display: flex;
   font-family: 'Roboto', sans-serif;
   background-color: #F7F7F7;
   height: 80px;
-  align-items: center;
   justify-content: center;
-}
-
-.promocoes div.swiper-wrapper p{
-    
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 .promocoes strong {
-
     text-transform: uppercase;
+}
+
+.carousel-control-prev-icon {
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon {
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 .promocoes p {
@@ -221,6 +240,15 @@ header {
     font-size: 26px;
     margin: 0;
     text-align: center;
+}
+
+.promocoes .carousel {
+    position: relative;
+    width: 1200px;
+}
+
+.carossel a.phone {
+    display: none;
 }
 
 .promocoes a {
@@ -237,81 +265,48 @@ header {
 
 }
 
-.promocoes div.swiper-wrapper strong {
-    margin-right: 10px
-}
 
-.promocoes div.swiper-wrapper a {
-    margin-left: 10px
-}
-
-.swiper-button-prev {
-    margin-left: 400px;
-}
-
-.swiper-button-prev::after {
-    color: black;
-
-}
-
-.swiper-button-next{
-    margin-right: 400px;
-}
-
-.swiper-button-next::after{
-    color: black;
+/*
+==================================================================================================================
+BANNER
+==================================================================================================================
+*/
+#banner a {
+    text-decoration: none;
 }
 
 .banner {
-    background-image: url(../assets/EaQvroQXYAE2dDC.jpg);
-    height: 820px;
+    background-image: url(../assets/FIFA\ 22.png);
+    height: 860px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100%;
     
     
 }
 
-.secao {
-    height: 372px;
-    width: 1920px;
-
-}
-
-.secao h1 {
-    
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 50px;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    font-weight: bold;
-
-}
-
-.secao p {
-
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 35px;
-    margin-top: 45px;
-    margin-bottom: 0px;
-
-}
-
-button.btn.btn-dark {
-    margin: 0;
-}
-
-.buttons {
-
+.itens-banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    height: 100%;
     align-items: center;
-    margin-top: 88px;
 }
 
-.buttons button {
+.texto-banner {
+    width: 40%;
+    text-align: center;
+}
+
+.texto-banner h2{
+    font-size: 150px;
+    text-shadow:  10px  0 10px white;
+    color: black;
+    font-family: 'Poppins', sans-serif;;
+    font-weight: 800;
+}
+
+.texto-banner .buttons button {
 
     width: 305px;
     height: 50px;
@@ -324,7 +319,70 @@ button.btn.btn-dark {
 
 } 
 
-.buttons button:hover {
+.texto-banner .buttons button:hover {
+
+    background-color: #F7F7F7;
+    color: #000000;
+
+}
+
+/*
+==================================================================================================================
+SECAO
+==================================================================================================================
+*/
+.secao {
+    height: 400px;
+    
+}
+
+.secao h2 {
+    
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    padding-top: 1.902173913%;
+    margin-bottom: 0px;
+    font-weight: bold;
+
+}
+
+.secao p {
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    margin-top: 3.913043478%;
+    margin-bottom: 0px;
+
+}
+
+.secao button.btn.btn-dark {
+    margin: 0;
+}
+
+.secao .buttons {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:  3.913043478%;
+}
+
+.secao .buttons button {
+
+    width: 20%;
+    height: 3%;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-top: 90px;
+    margin-bottom: 64px;
+
+} 
+
+.secao .buttons button:hover {
 
     background-color: #F7F7F7;
     color: #000000;
@@ -332,19 +390,33 @@ button.btn.btn-dark {
 }
 
 .products{
+    height: 1052px;
 
+}
+
+.products h2 {
+    
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    padding-top: 1.902173913%;
+    margin-bottom: 0px;
+    font-weight: bold;
+
+}
+
+.cards {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 840px;
-
+    padding-top: 4.6875rem;
 }
 
 .product {
 
     
-    width: 500px;
-    height: 780px;
+    width: 29.72826087%;
+    height: 45.10869565%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
 }
@@ -361,8 +433,8 @@ button.btn.btn-dark {
 
 .product img {
 
-    width: 500px;
-    height: 550px;
+    width: 100%;
+    height: 37.5rem;
     object-fit: cover;
     
 
@@ -579,7 +651,7 @@ section.testimonials div.container {
 
     margin-top: 30px;
     margin-bottom: 45px;
-    width: 1015px;
+    width: 80%;
     height: 60px;
     font-size: 28px;
     text-align: center;
@@ -598,7 +670,7 @@ section.testimonials div.container {
 }
 
 .footer-principal {
-    margin-top: 50px;
+    margin-top: 2.717391304%;
 }
 
 .footer-principal a {
@@ -606,7 +678,6 @@ section.testimonials div.container {
     color:white;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
     
@@ -624,15 +695,14 @@ section.testimonials div.container {
 
 
 .footer-ajuda {
-    margin-top: 50px;
-    margin-left: 160px;
+    margin-top: 2.717391304%;
+    margin-left: 9.130434784%;
 }
 
 .footer-ajuda a {
     
     color: rgba(255, 255, 255, 0.5);
     font-size: 20px;
-    margin-top: 25px;
     text-decoration: none;
         
 
@@ -649,15 +719,14 @@ section.testimonials div.container {
 }
 
 .footer-about {
-    margin-top: 50px;
-    margin-left: 160px;
+    margin-top: 2.717391304%;
+    margin-left: 9.130434784%;
 }
 
 .footer-about a {
     
     color: white;
     font-size: 20px;
-    margin-top: 25px;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -666,8 +735,8 @@ section.testimonials div.container {
 
 .redes-sociais {
     
-    margin-top: 50px;
-    width: 670px;
+    margin-top: 2.717391304%;
+    width: 36.41304348%
     
     
         
@@ -698,8 +767,498 @@ section.testimonials div.container {
 }
 
 
+/*
+==================================================================================================================
+MEDIA QUERY HEADER
+==================================================================================================================
+*/
+
+/*
+==================================================================================================================
+MEDIA QUERY HEADER 1520 - 1200 px
+==================================================================================================================
+*/
+@media screen and (max-width: 1520px) {
+
+    /* .container-grid {
+        width: 90%;
+    } */
+
+    .alinhamento {
+        display: flex;
+    }
+
+    .products {
+        height: 2700px;
+    }
+    .cards {
+        display: inline-block;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product {
+        width: 100%;
+        margin-bottom: 10px;
+        
+    }
+
+    .client a {
+        font-size: 14px;
+    }
+
+    .info a {
+        font-size: 14px;
+    }
+    
+
+    .menu form {
+        width: 15%;
+    }
+
+    .menu input {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    .category {
+        width: 80%;
+    }
+
+    .logo { 
+        width: 25%;
+    }
+
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .promocoes p {
+    
+        font-size: 22px;
+        width: 50%;
+    }
+    
+    .promocoes .carousel {
+        position: relative;
+        width: 90%;
+    }
+    
+    .promocoes a {
+    
+        font-size: 18px;
+    
+    }
+
+    .banner {
+        background-image: url('../assets/FIFA\ 23\ -\ 1500px\ \(1\).png');
+    }
+
+    .itens-banner {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    .texto-banner {
+        width: 80%;
+        text-align: center;
+    }
+
+    .texto-banner h2 {
+        font-size: 200px;
+        text-shadow:  10px  0 10px #FF0FCA;
+        color: white;
+    }
+
+    .texto-banner .buttons button {
+
+        width: 305px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid #FF0FCA;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        margin-top: 90px;
+        margin-bottom: 64px;
+        background-color: white;
+        color: black;
+    
+    } 
+    
+    .texto-banner .buttons button:hover {
+    
+        background-color: #FF0FCA;
+        color: white;
+    
+    }
 
 
+}
+
+/*
+==================================================================================================================
+MEDIA QUERY HEADER 1100 - 786 px
+==================================================================================================================
+*/
+ @media screen and (max-width: 1100px) {
+     /* .container-grid {
+         width: 90%;
+     } */
+
+     .client {
+         width: 55%;
+     }
+
+    .client a {
+        font-size: 14px;
+    }
+
+    .info {
+        width: 30%;
+    }
+
+    .info a {
+        font-size: 14px;
+    }
+
+    .menu { 
+        width: 70%;
+    }
+    
+
+    .menu form {
+        width: 12%;
+    }
+
+    .menu input {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .category {
+        width: 85%;
+    }
+
+    .logo { 
+        width: 28%;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .promocoes p {
+    
+        font-size: 18px;
+        width: 50%;
+    }
+    
+    
+    .promocoes a {
+    
+        font-size: 14px;
+    
+    }
+
+    .banner {
+        background-image: url('../assets/FIFA\ 23\ -\ 1500px\ \(1\).png');
+    }
+
+    .itens-banner {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    .texto-banner {
+        width: 80%;
+        text-align: center;
+    }
+
+    .texto-banner h2 {
+        font-size: 150px;
+        text-shadow:  10px  0 10px #FF0FCA;
+        color: white;
+    }
+
+    .texto-banner .buttons button {
+
+        width: 305px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid #FF0FCA;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        margin-top: 90px;
+        margin-bottom: 64px;
+        background-color: white;
+        color: black;
+    
+    } 
+    
+    .texto-banner .buttons button:hover {
+    
+        background-color: #FF0FCA;
+        color: white;
+    
+    }
+    
+
+    .secao h2 {
+        font-size: 40px;
+    }
+
+    .secao p {
+        font-size: 28px;
+    }
+
+    .secao .buttons { 
+        flex-direction: column;
+        display: flex;
+
+    }
+
+    .secao button.btn.btn-dark {
+        margin: 2px;
+    }
+
+    .secao .buttons button {
+        width: 60%;
+    }
+
+    .footer-principal a {
+
+        font-size: 16px;
+       
+        
+    }
+
+    .footer-ajuda a {
+    
+        
+        font-size: 16px;
+        
+            
+    
+    }
+
+    .footer-about a {
+    
+        font-size: 16px;
+        
+    }
+
+    .redes-sociais {
+        display: inline-block;
+    }
+
+    .redes-sociais p {
+
+        font-size: 16px;  
+    }
+
+    .redes-sociais .icones img {
+        width: 30px;
+        height: 30px;
+        margin-left: 2px;
+        margin-top: 2px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    
+
+    .header-1 {
+        height: 50px;
+    }
+
+    .info {
+        display: inline-block;
+    }
+    .info a {
+        font-size: 10px;
+    }
+
+    .client a {
+        font-size: 10px;
+    }
+
+    .category {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .category {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav.show .category {
+        opacity: 1;
+        visibility: visible;
+        background-color: white;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9990;
+        justify-content: unset;
+        gap: 4rem;
+    }
+
+    .category {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .category a {
+        font-weight: 1200;
+        font-size: 20px;
+
+    }
+
+
+    .barras {
+        display: inline-block;
+        position: absolute;
+        top: 32%;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .posicionamento-header2 {
+        position: relative;
+        flex-direction: column;
+    }
+    
+    .menu form {
+        position: absolute;
+        bottom: 5px;
+        width: 90%;
+        left: 5%;
+    }
+
+    .logo {
+        position: absolute;
+        top: 32%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .menu a::after {
+        bottom: -1rem;
+        width: 0%;
+        
+    }
+
+    .close {
+        display: inline-block;
+        position: absolute;
+        right: 1.5rem;
+        top: 0;
+        cursor: pointer
+    }
+
+    
+    .promocoes p {
+    
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    
+    
+    .promocoes a {
+    
+        font-size: 10px;
+    
+    }
+
+    .carousel-control-prev-icon {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 50%;
+    }
+
+    .carousel-control-next-icon {
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 50%;
+    }
+    
+
+    .banner {
+        background-image: url('../assets/Fifa_celular.png');
+    }
+    
+    .texto-banner h2 {
+        font-size: 70px;
+        text-shadow:  10px  0 10px #FF0FCA;
+        color: white;
+    }
+
+    .texto-banner .buttons button {
+
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid #FF0FCA;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        margin-top: 90px;
+        margin-bottom: 64px;
+        background-color: white;
+        color: black;
+    
+    } 
+    
+    .texto-banner .buttons button:hover {
+    
+        background-color: #FF0FCA;
+        color: white;
+    
+    }
+
+    .secao {
+        height: 360px
+    }
+
+    .secao h2 {
+        font-size: 28px;
+    }
+
+    .secao p {
+        font-size: 22px;
+    }
+
+    .secao .buttons button {
+        font-size: 22px;
+    }
+    
+}
 
 
 
