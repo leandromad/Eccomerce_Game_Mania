@@ -784,25 +784,6 @@ MEDIA QUERY HEADER 1520 - 1200 px
         width: 90%;
     } */
 
-    .alinhamento {
-        display: flex;
-    }
-
-    .products {
-        height: 2700px;
-    }
-    .cards {
-        display: inline-block;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .product {
-        width: 100%;
-        margin-bottom: 10px;
-        
-    }
 
     .client a {
         font-size: 14px;
@@ -897,6 +878,50 @@ MEDIA QUERY HEADER 1520 - 1200 px
         background-color: #FF0FCA;
         color: white;
     
+    }
+
+    .alinhamento {
+        display: flex;
+    }
+
+    .cards {
+        display: inline-block;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products {
+        height: 2050px;
+    }
+
+    .product {
+        margin-bottom: 2rem;
+        height: 36.5rem;
+        width: 100%;
+    }
+
+    .product img {
+        height: 28rem;
+    }
+
+    .product h5 {
+        margin-top: 0.2rem;
+        font-size: 25px;
+    }
+
+    .product h4 {
+        font-size: 25px;
+        margin-top: 0.2rem;
+    }
+
+    .product p {
+        font-size: 20px;
+        margin-top: 0.2rem;
+    }
+
+    .rate {
+        display:none;
     }
 
 
@@ -1077,12 +1102,67 @@ MEDIA QUERY HEADER 1100 - 786 px
     
     }
 
+    .products {
+        height: 1900px;
+    }
+
+    .product {
+        margin-bottom: 2rem;
+        height: 34rem;
+    }
+
+    .product img {
+        height: 25rem;
+    }
+
+    .newsletter h2 {
+        font-size: 26px;
+    }
+
+    .newsletter input {
+        margin-top: 1.8rem;
+        margin-bottom: 2rem;
+        font-size: 20px;
+    }
+
+    .testimonials {
+        width: 100%;
+        height: 550px;
+    }
+
+    section.testimonials div.container {
+        width: 80%;
+        height: 300px;
+        display: grid;
+    }
+    .testimonial {
+        width: 80%;
+        height: 30%;
+    }
+
+    .testimonial p {
+        font-size: 16px;
+    }
+
+    .avatar {
+        margin: auto;
+        height: 10%;
+
+    }
+
+    .testimonials p span {
+        font: 700 40px serif;
+    }
+
+    .testimonials p span {
+        font: 700 50px serif;
+        top: -2.5rem;
+        left: -1.5rem;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
-
-    
 
     .header-1 {
         height: 50px;
@@ -1090,13 +1170,18 @@ MEDIA QUERY HEADER 1100 - 786 px
 
     .info {
         display: inline-block;
+        width: 20%;
     }
     .info a {
-        font-size: 10px;
+        font-size: 8px;
+    }
+
+    .client {
+        width: 70%;
     }
 
     .client a {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .category {
@@ -1243,7 +1328,7 @@ MEDIA QUERY HEADER 1100 - 786 px
     }
 
     .secao {
-        height: 360px
+        height: 360px;
     }
 
     .secao h2 {
@@ -1257,8 +1342,64 @@ MEDIA QUERY HEADER 1100 - 786 px
     .secao .buttons button {
         font-size: 22px;
     }
-    
+
+    .products h2 {
+    font-size: 28px;
+    }
+
+    .newsletter h2 {
+        font-size: 22px;
+    }
+
+    .newsletter input {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    section.testimonials div.container {
+        width: 90%;
+        height: 350px;
+    }
+
+    .avatar img {
+        width: 45%;
+    }
+
+    .testimonial {
+        width: 70%;
+        height: 30%;
+    }
+
+    .testimonials p span {
+        font: 700 40px serif;
+        top: -3.5rem;
+        left: -1.2rem;
+    }
+
+    .testimonial p {
+        font-size: 14px;
+    }
 }
 
+@media screen and (max-width: 599px) {
 
+    .redes-sociais .icones {
+        display: grid;
+    }
+}
 
+@media screen and (max-width: 470px) {
+
+    .footer .container-grid {
+        display: grid;
+    }
+
+    .footer {
+        height: 880px;
+    }
+
+    .redes-sociais .icones {
+  
+        display: flex;
+    }
+}
